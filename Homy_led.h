@@ -16,7 +16,7 @@
 #define DEBUG_LED(...) digitalWrite( __VA_ARGS__ )
 #endif
 
-#define LED_NB              10
+#define LED_NB              15
 #define DEFAULT_COLOR       0xFF5900
 #define DEFAULT_BRIGHTNESS  255
 #define DEFAULT_SPEED       1000
@@ -28,10 +28,10 @@
 
 
 /************ WIFI and MQTT Information (CHANGE THESE FOR YOUR SETUP) ******************/
-const char *ssid = "VOO-008975";
-const char *password = "PPKKXMTK";
-const char *mqtt_server = "192.168.0.41";
-const char *mqtt_backup_server = "192.168.0.20";
+const char *ssid = "yourSSID";
+const char *password = "yourPassword";
+const char *mqtt_server = "yourServer";
+const char *mqtt_backup_server = "yourBackupServer";
 //const char* mqtt_username = "yourMQTTusername";
 //const char* mqtt_password = "yourMQTTpassword";
 const int mqtt_port = 1883;
@@ -194,7 +194,7 @@ void MDNSSetup()
   } 
   else 
   { 
-    Serial.println("Failed to read SHT31.");
+    DEBUGGING("Failed to read SHT31.");
   }
 }*/
 
